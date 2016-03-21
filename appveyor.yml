@@ -4,7 +4,7 @@ platform:
 matrix:
 # first group
   - ruby_version: "22-x64"
-  - python_version: "27-x64"
+    python_version: "27-x64"
 
 install:
 #  - git submodule update --init --recursive
