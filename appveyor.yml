@@ -16,10 +16,12 @@ install:
   - winrm set winrm/config/service/auth @{Basic="true"}
   - winrm set winrm/config/service @{AllowUnencrypted="true"}
   - SET PATH=C:\Ruby%ruby_version%\bin;%PATH%
-  - SET PATH=C:\Python%python_version%\bin;%PATH%
+  - SET PATH=C:\Python%python_version%\;%PATH%
+  - SET PATH=C:\Python%python_version%\Scripts;%PATH%
   - echo %PATH%
   - ruby --version
   - gem list
+  - gem install ansible_spec
   - python -V
   - cinst pip
   - pip list
