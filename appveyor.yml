@@ -23,6 +23,7 @@ install:
   - gem list
   - gem install ansible_spec
   - python -V
-  - choco list
-  - cinst -y pip
-  - pip list
+#  - choco list
+  - cinst -y docker docker-machine
+#  - cinst -y pip
+#  - pip list
