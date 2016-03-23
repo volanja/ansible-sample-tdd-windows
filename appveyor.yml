@@ -2,6 +2,7 @@ os: Windows Server 2012 R2
 platform:
   - x64
 environment:
+  TIMEOUT: "60m"
   matrix:
   # first group
     - ruby_version: "22-x64"
@@ -20,10 +21,15 @@ install:
   - SET PATH=C:\Python%python_version%\Scripts;%PATH%
   - echo %PATH%
   - ruby --version
-  - gem list
   - gem install ansible_spec
   - python -V
 #  - choco list
-  - cinst -y docker docker-machine
+  - cinst -y virtualbox docker docker-machine
 #  - cinst -y pip
 #  - pip list
+
+build_script:
+  - docker-machine.exe -v
+  - docker-machine.exe ls
+  - docker-machine.exe create --driver virtualbox dev
+  - docker-machine.exe ls
