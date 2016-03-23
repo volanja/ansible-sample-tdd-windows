@@ -33,5 +33,5 @@ build_script:
   - docker-machine.exe ls
   #- docker-machine.exe create --driver virtualbox dev
   # "Hyper-V is installed. VirtualBox won't boot a 64bits VM when Hyper-V is activated. If it's installed but deactivated, you can use --virtualbox-no-vtx-check to try anyways"
-  - docker-machine.exe create --driver hyperv vm
+  - docker-machine.exe create --driver virtualbox dev --virtualbox-no-vtx-check
   - docker-machine.exe ls
