@@ -1,0 +1,5 @@
+- name: check_serverspec
+  hosts: windows_host
+  user: root
+  roles:
+    - windows
