@@ -21,7 +21,8 @@ install:
   - SET PATH=C:\Python%python_version%\Scripts;%PATH%
   - echo %PATH%
   - ruby --version
-  - gem install ansible_spec
+  - gem install highline --no-ri --no-rdoc
+  - gem install ansible_spec --no-ri --no-rdoc
 #  - python -V
 #  - choco list
 #  - cinst -y virtualbox docker docker-machine
