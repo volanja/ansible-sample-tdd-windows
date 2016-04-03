@@ -1,5 +1,5 @@
 - name: check_serverspec
   hosts: windows_host
-  user: root
+  user: appveyor
   roles:
     - windows

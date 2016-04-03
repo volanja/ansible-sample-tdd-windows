@@ -23,6 +23,7 @@ install:
   - ruby --version
   - gem install highline --no-ri --no-rdoc
   - gem install ansible_spec --no-ri --no-rdoc
+  - net user appveyor %TARGET_PASSWORD% # set webui
 #  - python -V
 #  - choco list
 #  - cinst -y virtualbox docker docker-machine
